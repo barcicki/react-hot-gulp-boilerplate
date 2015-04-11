@@ -1,35 +1,17 @@
 {
-  "name": "react-hot-boilerplate",
-  "version": "1.0.0",
-  "description": "Boilerplate for ReactJS project with hot code reloading",
+  "name": "react-hot-gulp-boilerplate",
+  "version": "0.1.0",
+  "description": "Based on react-hot-boilerplate",
   "scripts": {
-    "start": "node server.js"
+    "start": "gulp serve",
+    "build": "gulp build"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gaearon/react-hot-boilerplate.git"
-  },
-  "keywords": [
-    "react",
-    "reactjs",
-    "boilerplate",
-    "hot",
-    "hot",
-    "reload",
-    "hmr",
-    "live",
-    "edit",
-    "webpack"
-  ],
-  "author": "Dan Abramov <dan.abramov@me.com> (http://github.com/gaearon)",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/gaearon/react-hot-boilerplate/issues"
-  },
-  "homepage": "https://github.com/gaearon/react-hot-boilerplate",
   "devDependencies": {
     "babel-core": "^4.7.4",
     "babel-loader": "^4.1.0",
+    "del": "^1.1.1",
+    "gulp": "^3.8.11",
     "react-hot-loader": "^1.2.2",
     "webpack": "^1.7.2",
     "webpack-dev-server": "^1.7.0"

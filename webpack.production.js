@@ -2,23 +2,19 @@ var common = require('./webpack.common.js');
 var webpack = require('webpack');
 
 module.exports = {
-    devtool: 'eval',
     entry: [
-        'webpack-dev-server/client?http://localhost:3000',
-        'webpack/hot/only-dev-server',
         common.MAIN_SCRIPT_PATH_AND_NAME
     ],
     output: {
         path: common.BUILD_PATH,
-        filename: common.BUNDLE_NAME
+        filename: common.BUNDLE_TARGET_PATH_AND_NAME
     },
-    plugins: [
-        new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoErrorsPlugin()
-    ],
     resolve: {
         extensions: ['', '.js', '.jsx']
     },
+    plugins: [
+        new webpack.optimize.UglifyJsPlugin({minimize: true})
+    ],
     module: {
         loaders: [{
             test: /\.jsx?$/,
